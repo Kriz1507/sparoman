@@ -13,13 +13,6 @@ let conexion=mysql.createConnection({
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD
 })
-console.log("========== CONEXION MYSQL ==========");
-console.log("HOST:", process.env.MYSQLHOST);
-console.log("PORT:", process.env.MYSQLPORT);
-console.log("DATABASE:", process.env.MYSQLDATABASE);
-console.log("USER:", process.env.MYSQLUSER);
-console.log("====================================");
-
 
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -52,8 +45,7 @@ conexion.query(registrar, function(error){
     }
 });
 });
-console.log("PUERTO WEB:", process.env.PORT);
- 
+
 app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
   console.log("Servidor creado correctamente");
 })
