@@ -52,6 +52,7 @@ conexion.query(registrar, function(error){
     }
 });
 });
+console.log("PUERTO WEB:", process.env.PORT);
  
 app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
   console.log("Servidor creado correctamente");
