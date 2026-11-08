@@ -13,6 +13,14 @@ let conexion=mysql.createConnection({
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD
 })
+console.log("========== CONEXION MYSQL ==========");
+console.log("HOST:", process.env.MYSQLHOST);
+console.log("PORT:", process.env.MYSQLPORT);
+console.log("DATABASE:", process.env.MYSQLDATABASE);
+console.log("USER:", process.env.MYSQLUSER);
+console.log("====================================");
+
+
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
