@@ -45,6 +45,6 @@ conexion.query(registrar, function(error){
 });
 });
  
-app.listen(3000, () => {
-  console.log("Servidor creado en localhost");
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log("Servidor creado correctamente");
 })
